@@ -3,7 +3,7 @@ require "minitest/autorun"
 require "minitest/reporters"
 Minitest::Reporters.use! Minitest::Reporters::JUnitReporter.new
 
-class TestPerson < MiniTest::Unit::TestCase
+class TestPerson < MiniTest::Test
 
   def test_simple_one
     assert_equal("Arie",
@@ -34,5 +34,8 @@ class TestPerson < MiniTest::Unit::TestCase
     assert_equal("Ben",
                  Contact.new("Ben", "Cohen", "Tel Aviv", "054-6666666").first_name)
   end
-
+  def test_simple_seven
+    assert_equal("Eran",
+                 Contact.new("Eran", "Cohen", "Jerusalem", "054-6666666").first_name)
+  end
 end
