@@ -36,6 +36,6 @@ class TestPerson < MiniTest::Test
   end
   def test_simple_seven
     assert_equal("Eran",
-                 Contact.new("Eran", "Cohen", "Jerusalem", "054-6666666").first_name)
+                 Contact.new("Eran", "Cohen", "Jerusalem", "052-6666666").first_name)
   end
 end
